@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add remove and manipulate HTML elements using JavaScript DOM</title>
+</head>
+<body>
+<button onclick="add()">Add Paragraph</button>
+<button onclick="remove()">Remove paragraph</button>
+<div id="paragraph"> </div>
+<script>
+function add() {
+var newItem = document.createElement("paragraph");
+var textnode = document.createTextNode("</br>This is test paragraph");
+newItem.appendChild(textnode);
+var text = document.getElementById("paragraph");
+text.insertBefore(newItem, text.childNodes[0]);
+}
+function remove() {
+var myobj = document.getElementById("paragraph");
+myobj.remove();
+}
+</script>
+</body>
+</html>
